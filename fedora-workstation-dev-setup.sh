@@ -78,6 +78,11 @@ sudo dnf -y copr enable emanuelec/k9s
 sudo dnf -y install k9s
 echo "Kubernetes Kubectl CLI and K9s installed."
 
+## Install Flatpaks
+echo "Installing Gnome-Tweaks..."
+sudo dnf -y install gnome-tweak-tool
+echo "Gnome-Tweaks installed."
+
 ## Update the system and clean up
 echo "Final system update and cleanup..."
 sudo dnf -y update
