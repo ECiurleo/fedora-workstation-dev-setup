@@ -1,3 +1,6 @@
+## Update the system before starting
+sudo dnf -y update
+
 ## Make a temp folder for Downloads
 mkdir Downloads/fedora-workstation-dev-setup-temp
 cd Downloads/fedora-workstation-dev-setup-temp
@@ -23,6 +26,35 @@ sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
 sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
 sudo dnf -y install github-desktop
 
+## Azure Cli
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo dnf install -y https://packages.microsoft.com/config/rhel/9.0/packages-microsoft-prod.rpm
+sudo dnf -y install azure-cli
+
+## AWS cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+## Install Kubernetes Kubectl CLI and K9s
+# Kubectl
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+EOF
+sudo dnf -y install -y kubectl
+# Helm
+sudo dnf -y install helm
+# k9s
+sudo dnf -y copr enable emanuelec/k9s
+sudo dnf -y install k9s
+
+## Update the system and clean up
+sudo dnf -y update
 
 # Clean up temp 
 rm -r Downloads/fedora-workstation-dev-setup-temp
