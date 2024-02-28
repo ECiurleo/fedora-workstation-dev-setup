@@ -21,6 +21,11 @@ sudo tar -xvzf ./jetbrains-toolbox-2.2.2.20062.tar.gz
 sudo mv jetbrains-toolbox-2.2.2.20062 /opt/jetbrains
 jetbrains/jetbrains-toolbox
 
+## Install Microsoft VScode
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf -y install code # or code-insiders
+
 ## Github Desktop
 sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
 sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
@@ -55,6 +60,26 @@ sudo dnf -y install k9s
 
 ## Update the system and clean up
 sudo dnf -y update
+
+## ## ## ## ## ## ## ##
+## Install Flatpaks
+## ## ## ## ## ## ## ##
+# Yubikey Authenticator
+sudo flatpak -y install flathub com.yubico.yubioath
+# Logitech controller
+sudo flatpak -y install flathub io.github.pwr_solaar.solaar
+
+## ## ## ## ## ## ## ##
+## Install Chat Apps
+## ## ## ## ## ## ## ##
+# Slack
+sudo flatpak -y install flathub com.slack.Slack
+# Zoom
+sudo flatpak -y install flathub us.zoom.Zoom
+# Teams
+sudo flatpak -y install flathub com.github.IsmaelMartinez.teams_for_linux
+# Telegram
+sudo flatpak -y install flathub org.telegram.desktop
 
 # Clean up temp 
 rm -r Downloads/fedora-workstation-dev-setup-temp
