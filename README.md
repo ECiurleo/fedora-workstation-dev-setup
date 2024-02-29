@@ -3,7 +3,26 @@ Setup for a fedora workstation to install and configure a developer machine
 
 ## Installs
 
-* Docker
-* Docker Desktop 
-* Github Desktop
-* Jetbrains Toolbox (to install IntelliJ)
+Dev Tools:
+* Docker Desktop
+* JetBrains Toolbox
+* Microsoft VSCode
+* GitHub Desktop
+
+ClI Tools:
+* Azure CLI
+* AWS CLI
+* Kubectl
+* Helm
+* K9s
+
+Chat Apps:
+* Slack
+* Zoom
+* Teams
+* Telegram
+
+Other
+* Gnome Tweaks/Extensions
+* Yubikey Authenticator
+* Logitech controller
