@@ -95,8 +95,13 @@ echo "Installing Flatpaks..."
 sudo flatpak -y install flathub com.yubico.yubioath
 # Logitech controller
 sudo flatpak -y install flathub io.github.pwr_solaar.solaar
-# Gnome Tweaks / Extentions
+echo "Installed Flatpaks."
+
+## Install Gnome Tweaks/Extentions
+echo "Installing Gnome Tweaks/Extentions."
+sudo dnf -y install gnome-tweaks
 sudo flatpak -y install flathub org.gnome.Extensions
+echo "Installed Gnome Tweaks/Extentions."
 
 ## Install Chat Apps
 echo "Installing Chat Apps..."
@@ -108,5 +113,6 @@ sudo flatpak -y install flathub us.zoom.Zoom
 sudo flatpak -y install flathub com.github.IsmaelMartinez.teams_for_linux
 # Telegram
 sudo flatpak -y install flathub org.telegram.desktop
+echo "Installed Chat Apps."
 
 echo "Setup complete."
