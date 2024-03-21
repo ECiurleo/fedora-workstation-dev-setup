@@ -45,6 +45,12 @@ sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://r
 sudo dnf -y install github-desktop
 echo "GitHub Desktop installed."
 
+## Lens Desktop
+echo "Installing Lens Desktop..."
+sudo dnf config-manager --add-repo https://downloads.k8slens.dev/rpm/lens.repo
+sudo dnf -y install lens
+echo "Lens Desktop installed."
+
 ## Azure Cli
 echo "Installing Azure CLI..."
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
