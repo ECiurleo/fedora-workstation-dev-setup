@@ -8,6 +8,7 @@ Dev Tools:
 * JetBrains Toolbox
 * Microsoft VSCode
 * GitHub Desktop
+* Lens (k8s gui)
 
 ClI Tools:
 * Azure CLI
