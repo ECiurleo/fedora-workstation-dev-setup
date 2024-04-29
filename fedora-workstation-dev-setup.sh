@@ -96,6 +96,9 @@ cd ~/Downloads  # Change back to the original directory
 rm -r fedora-workstation-dev-setup-temp
 echo "Temporary folder deleted."
 
+## Enable flathub
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 ## Install Flatpaks
 echo "Installing Flatpaks..."
 # Yubikey Authenticator
