@@ -47,9 +47,9 @@ sudo dnf -y install github-desktop
 echo "GitHub Desktop installed."
 
 echo "GitHub CLI installing...."
-sudo dnf install 'dnf-command(config-manager)'
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh
+sudo dnf -y install 'dnf-command(config-manager)'
+sudo dnf -y config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf -y install gh
 echo "GitHub CLI installed."
 
 ## Azure Cli
