@@ -18,6 +18,13 @@ mkdir -p ~/Downloads/fedora-workstation-dev-setup-temp
 cd ~/Downloads/fedora-workstation-dev-setup-temp
 echo "Temporary folder created."
 
+## Install Edge
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo dnf -y config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
+sudo dnf -y install microsoft-edge-stable
+echo "Edge installed."
+
+
 ## Install Docker Desktop
 echo "Installing Docker Desktop..."
 sudo dnf -y install github-desktop
