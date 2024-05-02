@@ -32,7 +32,7 @@ sudo dnf -y install dnf-plugins-core wget
 sudo dnf -y config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin gnome-terminal
 wget https://desktop.docker.com/linux/main/amd64/145265/docker-desktop-4.29.0-x86_64.rpm
-sudo dnf -y install ./docker-desktop-4.28.0-x86_64.rpm
+sudo dnf -y install ./docker-desktop-4.29.0-x86_64.rpm
 echo "Docker Desktop installed."
 
 # Add current user to the docker group
