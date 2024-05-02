@@ -8,7 +8,8 @@ echo "System update complete."
 echo "Adding RPM Fusion."
 sudo dnf -y install \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf -y update
+sudo dnf -y config-manager --enable fedora-cisco-openh264 
+sudo dnf -y update --refresh
 echo "Added RPM Fusion."
 
 ## Make a temp folder for Downloads
@@ -132,5 +133,8 @@ sudo flatpak -y install flathub com.github.IsmaelMartinez.teams_for_linux
 # Telegram
 sudo flatpak -y install flathub org.telegram.desktop
 echo "Installed Chat Apps."
+
+## Install Steam
+sudo dnf -y install steam 
 
 echo "Setup complete."
