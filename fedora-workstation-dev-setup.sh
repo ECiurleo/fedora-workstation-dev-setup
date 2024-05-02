@@ -1,7 +1,15 @@
 ## Update the system before starting
 echo "Updating system..."
 sudo dnf -y update
+sudo dnf -y upgrade
 echo "System update complete."
+
+## Enable RPM Fusion (non-free)
+echo "Adding RPM Fusion."
+sudo dnf -y install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf -y update
+echo "Added RPM Fusion."
 
 ## Make a temp folder for Downloads
 echo "Creating temporary folder for Downloads..."
