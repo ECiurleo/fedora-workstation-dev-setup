@@ -2,6 +2,8 @@
 Setup for a fedora workstation to install and configure a developer machine
 
 ## Installs
+Browser:
+* Microsoft Edge
 
 Dev Tools:
 * Docker Desktop
@@ -26,3 +28,4 @@ Other
 * Gnome Tweaks/Extensions
 * Yubikey Authenticator
 * Logitech controller
+* Steam
