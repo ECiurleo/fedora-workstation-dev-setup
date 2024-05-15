@@ -82,6 +82,18 @@ unzip awscliv2.zip
 sudo ./aws/install
 echo "AWS CLI installed."
 
+## Ansible
+echo "Installing Ansible..."
+sudo dnf -y install ansible
+echo "Ansible installed."
+
+## Terraform
+echo "Installing Terraform..."
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/$release/hashicorp.repo
+sudo dnf install -y terraform
+echo "Terraform installed."
+
 ## Install Kubernetes Kubectl CLI and K9s
 echo "Installing Kubernetes Kubectl CLI and K9s..."
 # Kubectl
