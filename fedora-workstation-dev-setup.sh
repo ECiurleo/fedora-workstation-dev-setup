@@ -90,8 +90,8 @@ echo "Ansible installed."
 ## Terraform
 echo "Installing Terraform..."
 sudo dnf install -y dnf-plugins-core
-sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/$release/hashicorp.repo
-sudo dnf install -y terraform
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+sudo dnf -y install terraform
 echo "Terraform installed."
 
 ## Install Kubernetes Kubectl CLI and K9s
@@ -155,5 +155,10 @@ echo "Installed Chat Apps."
 
 ## Install Steam
 sudo dnf -y install steam 
+
+## sshuttle
+echo "Installing sshuttle..."
+sudo dnf -y install sshuttle
+echo "sshuttle installed."
 
 echo "Setup complete."
