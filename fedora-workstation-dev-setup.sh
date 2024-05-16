@@ -118,6 +118,8 @@ EOF
 sudo dnf -y install -y kubectl
 # Helm
 sudo dnf -y install helm
+helm plugin install https://github.com/databus23/helm-diff
+
 # k9s
 sudo dnf -y copr enable emanuelec/k9s
 sudo dnf -y install k9s
