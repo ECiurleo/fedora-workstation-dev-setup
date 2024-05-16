@@ -83,9 +83,12 @@ sudo ./aws/install
 echo "AWS CLI installed."
 
 ## Ansible
-echo "Installing Ansible..."
+echo "Installing Ansible and plugins..."
 sudo dnf -y install ansible
-echo "Ansible installed."
+sudo dnf -y install python3-pip
+pip3 install kubernetes
+ansible-galaxy collection install community.kubernetes
+echo "Ansible and plugins installed."
 
 ## Terraform
 echo "Installing Terraform..."
@@ -93,6 +96,13 @@ sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 sudo dnf -y install terraform
 echo "Terraform installed."
+
+## MySQL client
+echo "Installing MySQL client..."
+sudo dnf -y install mysql
+sudo dnf -y install jq
+echo "MySQL client installed."
+
 
 ## Install Kubernetes Kubectl CLI and K9s
 echo "Installing Kubernetes Kubectl CLI and K9s..."
@@ -112,6 +122,7 @@ sudo dnf -y install helm
 sudo dnf -y copr enable emanuelec/k9s
 sudo dnf -y install k9s
 echo "Kubernetes Kubectl CLI and K9s installed."
+
 
 ## Update the system and clean up
 echo "Final system update and cleanup..."
