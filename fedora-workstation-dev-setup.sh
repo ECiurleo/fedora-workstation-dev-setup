@@ -144,8 +144,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 echo "Installing Flatpaks..."
 # Yubikey Authenticator
 sudo flatpak -y install flathub com.yubico.yubioath
-# Logitech controller
-sudo flatpak -y install flathub io.github.pwr_solaar.solaar
 echo "Installed Flatpaks."
 
 ## Install Gnome Tweaks/Extentions
