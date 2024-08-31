@@ -2,7 +2,11 @@
 
 This script automates the installation of various development tools and applications on a Fedora workstation.
 
-## Prerequisites
+Dev Tools:
+* Docker Desktop
+* JetBrains Toolbox
+* Microsoft VSCode
+* GitHub Desktop
 
 Ensure you have sudo privileges.
 
