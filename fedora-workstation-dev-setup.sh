@@ -24,7 +24,6 @@ sudo dnf -y config-manager --add-repo https://packages.microsoft.com/yumrepos/ed
 sudo dnf -y install microsoft-edge-stable
 echo "Edge installed."
 
-
 ## Install Docker Desktop
 echo "Installing Docker Desktop..."
 sudo dnf -y install github-desktop
@@ -39,14 +38,6 @@ echo "Docker Desktop installed."
 echo "Adding current user to Docker group..."
 sudo usermod -aG docker $USER
 echo "User added to Docker group."
-
-## Install Jetbrains Toolbox
-echo "Installing JetBrains Toolbox..."
-wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.2.2.20062.tar.gz
-sudo tar -xvzf ./jetbrains-toolbox-2.2.2.20062.tar.gz
-sudo mv jetbrains-toolbox-2.2.2.20062 /opt/jetbrains
-/opt/jetbrains/jetbrains-toolbox
-echo "JetBrains Toolbox installed."
 
 ## Install Microsoft VScode
 echo "Installing Microsoft VSCode..."
@@ -131,7 +122,6 @@ sudo dnf -y copr enable emanuelec/k9s
 sudo dnf -y install k9s
 echo "Kubernetes Kubectl CLI and K9s installed."
 
-
 ## Update the system and clean up
 echo "Final system update and cleanup..."
 sudo dnf -y update
@@ -153,10 +143,10 @@ sudo flatpak -y install flathub com.yubico.yubioath
 echo "Installed Flatpaks."
 
 ## Install Gnome Tweaks/Extentions
-echo "Installing Gnome Tweaks/Extentions."
-sudo dnf -y install gnome-tweaks
-sudo flatpak -y install flathub org.gnome.Extensions
-echo "Installed Gnome Tweaks/Extentions."
+# echo "Installing Gnome Tweaks/Extentions."
+# sudo dnf -y install gnome-tweaks
+# sudo flatpak -y install flathub org.gnome.Extensions
+# echo "Installed Gnome Tweaks/Extentions."
 
 ## Install Chat Apps
 echo "Installing Chat Apps..."
@@ -170,12 +160,12 @@ sudo flatpak -y install flathub com.github.IsmaelMartinez.teams_for_linux
 sudo flatpak -y install flathub org.telegram.desktop
 echo "Installed Chat Apps."
 
-## Install Steam
+## Install Fun Stuff
+echo "Installing Fun Apps."
+# Steam
 sudo dnf -y install steam 
-
-## sshuttle
-echo "Installing sshuttle..."
-sudo dnf -y install sshuttle
-echo "sshuttle installed."
+# Spotify
+flatpak install flathub com.spotify.Client
+echo "Installed Fun Apps."
 
 echo "Setup complete."
