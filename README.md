@@ -1,12 +1,6 @@
 # Fedora Workstation Development Setup
 
-This script automates the installation of various development tools and applications on a Fedora workstation.
-
-Dev Tools:
-* Docker Desktop
-* JetBrains Toolbox
-* Microsoft VSCode
-* GitHub Desktop
+This script automates the installation of various development tools and applications on a Fedora workstation aimed towards DevOps.
 
 Ensure you have sudo privileges.
 
@@ -18,7 +12,6 @@ Ensure you have sudo privileges.
 4. Installs the following software:
    - Microsoft Edge
    - Docker Desktop
-   - JetBrains Toolbox
    - Microsoft Visual Studio Code
    - GitHub Desktop
    - GitHub CLI
@@ -31,10 +24,10 @@ Ensure you have sudo privileges.
    - Helm
    - K9s
    - Various Flatpak applications (Yubikey Authenticator, Logitech Controller)
-   - Gnome Tweaks and Extensions
+   - Gnome Tweaks and Extensions (commented in case of use of spin)
    - Chat applications (Slack, Zoom, Teams, Telegram)
    - Steam
-   - sshuttle
+   - Spotify
 
 5. Cleans up temporary files and performs a final system update.
 
